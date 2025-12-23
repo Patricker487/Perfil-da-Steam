@@ -19,10 +19,10 @@ body{
 
 h1{
     text-align: center;
-    color: #000;
+    color: black;
 }
 h3{
-    color: #000;
+    color: black;
 }
 img{
     display: block;
@@ -58,4 +58,13 @@ a{
     text-align: justify;
     line-height: 185%;
 
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: purple;
+    color: plum;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
