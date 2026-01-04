@@ -25,8 +25,12 @@ h3{
     color: black;
 }
 img{
+    box-shadow: 0px 0px 10px #2d2d2d,
+    0px 0px 10px #2d2d2d inset;
+    border: 2px solid #2d2e2e;
     display: block;
     margin: 20px auto;
+    border-radius: 15px;
 }
 a{ 
     text-align: center;
@@ -62,8 +66,8 @@ a{
 .btn{
     display: inline-block;
     padding: 10px 20px;
-    background-color: purple;
-    color: plum;
+    background-color: #2d2d2d;
+    color: #000000;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
