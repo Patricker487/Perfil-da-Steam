@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #6b4eff, #1a102f);
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.3);
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  opacity: 0.8;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 15px;
+}
+
+.grid.small {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.grid.games {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.item,
+.game {
+  background: rgba(255,255,255,0.12);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: default;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.item:hover,
+.game:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.2);
+}
+
+/* DOUBLE SECTION */
+.double {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* LIST */
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+/* ===== JOGOS COM HOVER STEAM ===== */
+
+.game-card {
+  position: relative;
+  background: rgba(255,255,255,0.12);
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.18);
+}
+
+/* CARD FLUTUANTE */
+.hover-card {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 230px;
+  background: rgba(15, 15, 35, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 15px;
+
+  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.hover-card h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.hover-card p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
+/* MOSTRAR NO HOVER */
+.game-card:hover .hover-card {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-6px);
+}
+
